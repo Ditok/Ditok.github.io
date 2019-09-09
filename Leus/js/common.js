@@ -240,7 +240,7 @@ $(function() {
 
 		var url = $(location).attr('pathname');
 		var width = $(window).width();
-		if( url == "/Leus/index.html" || url == "Leus/" && width > 768) {
+		if( url == "Leus/index.html" || url == "Leus/" && width > 768) {
 
 			$('.hamburger').on('click', toggleMenu);
 			setTimeout(function(){
@@ -250,7 +250,7 @@ $(function() {
 				arrowRight();
 			}, 1600);
 
-		} else if ( url == "/Leus/index.html" || url == "Leus/" && width < 768 ) {
+		} else if ( url == "Leus/index.html" || url == "Leus/" && width < 768 ) {
 			$('.hamburger').on('click', toggleMenuSmall);
 		}
 
