@@ -238,9 +238,9 @@ $(function() {
 
 	function checkWidth() {
 
-		var url = $(location).attr('pathname');
+		var url = $(location).attr('href');
 		var width = $(window).width();
-		if( url == "Leus/index.html" || url == "Leus/" && width > 768) {
+		if( url == "https://ditok.github.io/Leus/" || url == "Leus/" && width > 768) {
 
 			$('.hamburger').on('click', toggleMenu);
 			setTimeout(function(){
@@ -250,7 +250,7 @@ $(function() {
 				arrowRight();
 			}, 1600);
 
-		} else if ( url == "Leus/index.html" || url == "Leus/" && width < 768 ) {
+		} else if ( url == "https://ditok.github.io/Leus/" || url == "Leus/" && width < 768 ) {
 			$('.hamburger').on('click', toggleMenuSmall);
 		}
 
