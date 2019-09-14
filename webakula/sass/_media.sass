@@ -1,0 +1,199 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+// ≥1600px
++media-breakpoint-down(xl)
+
+// ≥1200px
++media-breakpoint-down(lg)
+	
+	// FEEDBACK
+	.form
+		flex-direction: column
+		.button
+			margin-top: 40px
+
+// ≥992px
++media-breakpoint-down(md)
+	
+	.ishome
+		font-size: 12px
+	
+	// HEADER
+	.header-title
+		.h1
+			font-size: 1.6em
+
+	.logo
+		img
+			width: 70px
+
+	.menu
+		position: fixed
+		top: 0
+		right: -330px
+		min-width: 330px
+		height: 100vh
+		padding-top: 5%
+		background-color: $accent
+		transition: all ease 1s
+		z-index: 300
+		&.is-active
+			transform: translateX(-330px)
+		&__list
+			display: block
+		&__item
+			background-color: transparent
+			&:first-child
+				border-radius: 0
+			&:last-child
+				border-radius: 0
+		.hidden
+			position: relative
+			margin: 0
+			background-color: transparent
+			a
+				color: rgba($dark, .6)
+				text-align: left
+
+	.hamburger
+		display: flex
+
+	.close
+		display: none
+		position: absolute
+		top: 20px
+		right: 20px
+		background-color: transparent
+
+	.contacts
+		justify-content: center
+		&__numbers
+			margin-bottom: 0
+		&__phone
+			margin-right: 15px
+			&:nth-child(2)
+				margin-right: 15px
+		&__soc
+			display: flex
+
+	#carousel-dots
+		.owl-dot
+			width: 12px
+			height: 12px
+
+	// TOURS
+	.tours-carousel
+		width: 60%
+		.cost
+			margin-top: 20px
+		.owl-nav
+			.owl-prev
+				left: -10%
+			.owl-next
+				right: -10%
+
+	// FEEDBACK
+	.form
+		&-input
+			display: block
+		.wrapper
+			margin-bottom: 30px
+			input:last-child
+				margin: 0
+		.button
+			margin-top: 0
+
+// ≥768px
++media-breakpoint-down(sm)
+
+	//HEADER
+	.contacts__phone
+		display: none
+
+	.hamburger
+		margin-left: 30px
+
+	.carousel
+		height: 400px
+		img
+			width: auto !important
+			height: fill-available
+
+	// TOURS
+	.tours-carousel
+		width: 75%
+
+	// ADVANTAGES
+	.advantages-text
+		margin: 20px 0
+
+	// FOOTER
+	.footer
+		&-title
+			margin: 30px 0 20px
+		&-list
+			&.first
+				border-bottom: 1px solid rgba($text, .4)
+				padding-bottom: 20px
+				li
+					&:nth-child(2)
+						border: none
+
+// ≥576px
++media-breakpoint-down(xs)
+	
+	.ishome
+		font-size: 11px
+		text-align: center
+
+	// HEADER
+	.header-title
+		position: relative
+
+	.close
+		display: flex
+
+	// TOURS
+	.tours-carousel
+		width: 90%
+		&__item
+			display: flex
+			flex-direction: column
+			img
+				width: 100% !important
+			.wrapper
+				margin: 20px 0 0
+
+	// ADVANTAGES
+	.advantages-text
+		margin: 10px 0
+		padding: 0 10px
+		border: none
+		&::after
+			display: none
+
+	// FEEDBACK
+	.form
+		.wrapper
+			margin: 0
+			input
+				margin: 15px 0
+				width: 100%
+				&:last-child
+					margin: 15px 0
+			select
+				margin: 0
+				margin: 15px 0
+		.button
+			margin-top: 30px
+			width: 100%
+
+	// FOOTER
+	.footer-list
+		&.last li
+			justify-content: center
+
+
+
